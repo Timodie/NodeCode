@@ -16,6 +16,7 @@ exports.read_a_slyde = function(req,res){
 
 
 exports.create_slyde = function(req,res){
+  console.log("get was sent to awesomeapp/callback")
   slyde.create({
     status:req.body.status,
     transac_id:req.body.transac_id,
@@ -31,6 +32,7 @@ exports.create_slyde = function(req,res){
 }
 
 exports.list_all_slyde = function(req,res){
+  console.log("post was sent to awesomeapp/callback")
   Slyde.find({},function(err,slyde){
     if(err)
       res.send(err);
